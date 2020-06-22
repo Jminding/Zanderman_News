@@ -1,13 +1,11 @@
 [![Run on Repl.it](https://repl.it/badge/github/SparklyFlowers/Zanderman_News)](https://repl.it/github/SparklyFlowers/Zanderman_News)
-# Zanderman_News
-# Zanderman-News
 #logo
 import time
 import turtle
 wn = turtle.Screen()
+wn.screensize(1000, 1000)
 john = turtle.Turtle()
 john.hideturtle()
-wn.screensize(1000,1000)
 # Making the Z
 john.speed(0)
 john.color("green")
@@ -116,6 +114,7 @@ report = 'Last week the great "jumper" TigerEye123 broke the long jumping world 
 john.write(report, font = style3, align = 'center')
 time.sleep(7)
 undo(43, john)
+john.speed(0)
 john.fillcolor('navy')
 john.goto(0,0)
 john.begin_fill()
@@ -152,6 +151,8 @@ john.forward(50)
 john.write("That's it folks!", font=style, align = 'center')#We end with a that's it folks!
 time.sleep(3)
 undo(16,john)
+john.hideturtle()
+john.speed(0)
 john.penup()
 style=('normal', 20, 'underline')
 john.home()
@@ -159,6 +160,7 @@ john.write("Credits", font = style, align = 'center')#And here are the credits
 john.left(90)
 john.forward(100)
 style=('normal', 20, 'bold')
+wn.bgcolor('lightgreen')
 john.write("ZANDERMAN NEWS",font = style, align = 'center')
 john.right(180)
 john.forward(150)
@@ -167,3 +169,5 @@ john.forward(50)
 john.write('TigerEye123', font = style, align = 'center')#TigerEye123
 john.forward(50)
 john.write("Zanderman", font = style, align = 'center')#And Zanderman
+
+wn.mainloop()
