@@ -108,7 +108,7 @@ wn.bgcolor('lightblue')
 john.hideturtle()
 john.forward(-100)
 style3=('normal', 10, 'bold')
-report = 'Last week the great "jumper" TigerEye123 broke the long jumping world record, by jumping 10 feet."\n" TigerEye123 is now in the python hall of fame, and is known around the world.'
+report = 'Last week the great "jumper" TigerEye123 broke the long jumping world record, by jumping 10 feet.\n TigerEye123 is now in the python hall of fame, and is known around the world.'
 
 john.write(report, font = style3, align = 'center')
 time.sleep(7)
@@ -140,21 +140,42 @@ style=('normal', 15, 'bold')
 john.home()
 john.left(90)
 john.forward(100)
-john.right(180)
-john.write("Weather Today:", font = style, align = 'center')
-john.forward(50)
-john.write("Hot and Humid, go for a walk!", font=style, align = 'center') #We tell the weather
-john.forward(50)
-john.write ("It's 6/22/20 and...", font=style, align = 'center') #Tell the date
+john.left(90)
+john.forward(100)
+john.left(90)
+style4=('normal', 10, 'bold')
+john.color('purple')
+john.write("Weather in \n Canada:", font = style4, align = 'center')
+john.forward(90)
+john.write("Thunderstorms\n at noon \n till afternoon, \n partly cloudly in\n the evening", font=style4, align = 'center') #We tell the weather
+john.forward(-90)
+john.left(90)
+john.forward(200)
+john.right(90)
+john.color('black')
+john.write("Weather in central US:", font=style4, align='center')
+john.forward(70)
+john.write("Thunderstorms all \nacross the country,\n stay safe.", font=style4, align='center')
+john.forward(-70)
+john.right(90)
+john.forward(100)
+john.left(90)
+john.forward(200)
+john.write ("It's 6/23/20 and...", font=style, align = 'center') #Tell the date
 john.forward(50)
 john.write("That's it folks!", font=style, align = 'center')#We end with a that's it folks!
-time.sleep(3)
-undo(16,john)
+time.sleep(8)
+undo(19,john)
 john.hideturtle()
 john.speed(0)
 john.penup()
+
+
+
+# Cradits
 style=('normal', 20, 'underline')
 john.home()
+john.color('black')
 john.write("Credits", font = style, align = 'center')#And here are the credits
 john.left(90)
 john.forward(100)
