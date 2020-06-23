@@ -2,7 +2,6 @@
 import time
 import turtle
 wn = turtle.Screen()
-wn.screensize(1000, 1000)
 john = turtle.Turtle()
 john.penup()
 def undo (times, t):
