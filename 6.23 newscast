@@ -4,6 +4,7 @@ import turtle
 wn = turtle.Screen()
 wn.screensize(1000, 1000)
 john = turtle.Turtle()
+john.penup()
 def undo (times, t):
     for i in range (times):
        t.speed(0)
@@ -57,7 +58,7 @@ for i in range(10):
 
 
   
-undo(46, john)
+undo(60, john)
 
 #drawing triangle
 
@@ -168,7 +169,7 @@ def weather_report():
   john.color('black')
   john.write("Weather in US:", font=style4, align='center')
   john.forward(70)
-  john.write("Thunderstorms all \nacross the country,\n stay safe.", font=style4, align='center')
+  john.write("Thunderstorms all \n across the country,\n stay safe.", font=style4, align='center')
   john.forward(-70)
   john.right(90)
   john.forward(100)
@@ -183,6 +184,8 @@ def weather_report():
   john.speed(0)
 
 def tiger_jokes():
+  john.penup()
+  #intro
   '''tiger jokes'''
   john.hideturtle()
   wn.bgcolor('lightblue')
@@ -208,7 +211,6 @@ def tiger_jokes():
   time.sleep(3)
   undo(20, john)
   john.pencolor('black')
-
   style=('normal', 20, 'underline')
   john.penup()
   john.speed(0)
@@ -227,7 +229,115 @@ def tiger_jokes():
   time.sleep(3)
   undo(20, john)
   
-channel = int(input("What channel do you want to watch? Please input 1, 2, or 3. If you'd like a full replay, please input any other integer "))
+def COVID_19():
+  #intro
+   john.hideturtle()
+   wn.bgcolor('lightblue')
+   style=('normal', 30, 'bold')
+   john.fillcolor('navy')
+   john.goto(0,0)
+   john.begin_fill()
+   john.forward(-50)
+   for i in range(3):
+      john.forward(100)
+      john.left(120)
+   john.end_fill()
+   john.forward(50)
+   john.penup()
+   john.goto(0, 16)
+   john.pencolor('white') #We make the second story, channel 2
+   john.write('4', font=style, align='center')
+   john.left(90)
+   john.penup()
+   john.forward(100)
+   john.write('Channel', font=style, align='center')
+   john.hideturtle()
+   time.sleep(3)
+   undo(20, john)
+   john.home()
+   john.penup()
+   john.left(90)
+   john.forward(200)
+   john.write("Cases have been increasing lately in Florida", font = style, align = 'center')
+   john.right(180)
+   john.forward(80)
+   john.write("Total cases: 9.15M", font = style, align = 'center')
+   john.forward(80)
+   john.write("Total recovered: 4.59M", font = style, align = 'center')
+   john.forward(80)
+   john.write("Total deaths: 474K", font = style, align = 'center')
+   time.sleep(3)
+   undo(30, john) 
+   john.left(90)
+   john.penup()
+   john.forward(100)
+   john.write("Total U.S. cases: 2.37M", font = style, align ='center')
+   john.right(180)
+   john.forward(50)
+   john.write("Total U.S. recoveries: 75.35K", font = style, align ='center')
+   john.forward(50)
+   john.write("Total U.S. deaths: 123K", font = style, align ='center')
+   john.forward(50)
+   time.sleep(5)
+   undo(20, john)
+   john.left(90)
+   john.penup()
+   john.forward(100)
+   john.write("Total Canadian cases: 101,637", font=style, align='center')
+   john.right(180)
+   john.forward(50)
+   john.write("Total Canadian recoveries: 64,334", font=style, align='center')
+   john.forward(50)
+   john.write("Total Canadian Deaths: 8,436", font=style, align='center')
+   time.sleep(5)
+   undo(42,john)
+   
+def famous_birthdays():
+  #intro
+  john.hideturtle()
+  wn.bgcolor('lightblue')
+  style=('normal', 30, 'bold')
+  john.fillcolor('navy')
+  john.goto(0,0)
+  john.begin_fill()
+  john.forward(-50)
+  for i in range(3):
+     john.forward(100)
+     john.left(120)
+  john.end_fill()
+  john.forward(50)
+  
+  john.goto(0, 16)
+  john.pencolor('white') #We make the second story, channel 2
+  john.write('5', font=style, align='center')
+  john.left(90)
+  john.penup()
+  john.forward(100)
+  john.write('Channel', font=style, align='center')
+  john.hideturtle()
+  time.sleep(3)
+  undo(20, john)
+  john.home()
+  john.left(90)
+  john.penup()
+  john.forward(100)
+  john.write('Famous Birthdays on June 23', font = style, align = 'center')
+  john.left(180)
+  john.forward(100)
+  
+  style2 = ('normal', 20, 'bold')
+  john.write('Zinedine Zidane', font=style, align='center')
+  style3 = ('normal',10, 'normal')
+  john.forward(100)
+  
+  john.write('Zinedine Zidane, the famous soccer player was born today, June 23', font=style2, align='center')
+  time.sleep(4)
+  undo(30,john)
+
+
+
+  
+channel = int(input("What channel do you want to watch? Please input 1, 2, 3, 4, or 5. If you would like a full replay, please input any other integer. "))
 if channel==1:
   channel_one()
   daily_news()
@@ -235,20 +345,28 @@ elif channel == 2:
   weather_report()
 elif channel == 3:
   tiger_jokes()
+elif channel==4:
+  COVID_19()
+elif channel==5:
+  famous_birthdays()
+
 else:
   channel_one()
   daily_news()
   weather_report()
   tiger_jokes()
+  COVID_19()
+  famous_birthdays()
 
 # Credits
 john.penup()
 john.hideturtle()
 style=('normal', 20, 'underline')
 john.home()
+john.left(90)
+john.forward(50)
 john.color('black')
 john.write("Credits", font = style, align = 'center')#And here are the credits
-john.left(90)
 john.forward(100)
 style7=('normal', 20, 'bold')
 wn.bgcolor('lightgreen')
@@ -260,5 +378,7 @@ john.forward(50)
 john.write('TigerEye123', font = style7, align = 'center')#TigerEye123
 john.forward(50)
 john.write("Zanderman", font = style7, align = 'center')#And Zanderman
+john.forward(50)
+john.write("BlueJay43", font=style7, align='center')
 
 wn.mainloop()
