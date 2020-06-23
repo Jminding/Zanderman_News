@@ -166,7 +166,7 @@ def weather_report():
   john.forward(200)
   john.right(90)
   john.color('black')
-  john.write("Weather in central US:", font=style4, align='center')
+  john.write("Weather in US:", font=style4, align='center')
   john.forward(70)
   john.write("Thunderstorms all \nacross the country,\n stay safe.", font=style4, align='center')
   john.forward(-70)
@@ -178,7 +178,7 @@ def weather_report():
   john.forward(50)
   john.write("That's it folks!", font=style3, align = 'center')#We end with a that's it folks!
   time.sleep(8)
-  undo(19,john)
+  undo(25,john)
   john.hideturtle()
   john.speed(0)
 
