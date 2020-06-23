@@ -57,49 +57,52 @@ for i in range(10):
 
 
   
-undo(42, john)
+undo(46, john)
 
 #drawing triangle
 
-john.fillcolor("blue")
-john.begin_fill()
-john.left(120)
-john.forward(100)
-john.left(120)
-john.forward(100)
-john.left(120)
-john.forward(100)
-john.end_fill()
-john.penup()
 
-def channel_one()
-#getting to center of triangle (pythagorean theoream)
-    john.goto(0,1/2*((10000-2500)**0.5))
+def channel_one():
+    john.fillcolor("blue")
+    john.begin_fill()
+    john.forward(-50)
+    john.forward(100)
+    john.left(120)
+    john.forward(100)
+    john.left(120)
+    john.forward(100)
+    john.left(120)
+    john.forward(100)
+    john.end_fill()
+    john.penup()
+    #getting to center of triangle (pythagorean theoream)
+    john.goto(0,15)
     john.pendown()
-#writing 1
+    #writing 1
     style=('normal', 20, 'bold')
     john.pencolor('white')
     john.write('1', font=style, align='center')
 
-    john.right(90)
+    john.left(90)
     john.penup()
     john.forward(100)
     john.pencolor('black')
     style=('normal', 30, 'bold')
     john.pendown()
-#top, writing to show channel 1
+    #top, writing to show channel 1
     john.write('Channel', font=style, align='center')
     john.hideturtle()
     wn.bgcolor('lavender')
-#timer (john stalls time)
-   time.sleep(3)
-#undo
-    undo(42, x)
+    #timer
+    time.sleep(3)
+    #undo
+    undo(42, john)
+    john.speed(0)
 
 
 def daily_news():
   '''shows the daily news'''
-  
+  style=('normal', 20, 'bold')
   john.write('Daily News', font=style, align='center')
   john.hideturtle()
   time.sleep(3)
@@ -114,7 +117,7 @@ def daily_news():
   john.hideturtle()
   john.forward(-100)
   style3=('normal', 10, 'bold')
-  report = 'This week SparklyFlowers made history by making a AOPS avatar maker. "\n" Look at post 28 on the messing around with turtles thread to see the program.'
+  report = 'This week SparklyFlowers made history by making a AoPS avatar maker. \n Look at post 28 on the messing around with turtles thread to see the program.'
   john.write(report, font = style3, align = 'center')
   time.sleep(7)
   undo(43, john)
@@ -122,7 +125,7 @@ def daily_news():
 
 def weather_report():
   '''does the weather'''
-
+  style=('normal', 30, 'bold')
   john.fillcolor('navy')
   john.goto(0,0)
   john.begin_fill()
@@ -177,30 +180,40 @@ def weather_report():
   undo(19,john)
   john.hideturtle()
   john.speed(0)
+
+def tiger_jokes():
+  '''tiger jokes'''
   john.penup()
+  john.goto(0, 16)
+  john.pendown()
+  john.pencolor('white') #We make the third story, channel 3
+  john.write('3', font=style, align='center')#make john write the 3
+  undo(8, john)
+  john.home()
+  john.left(90)
+  john.forward(100)
+  john.write('Jokes with TigerEye', font=style, align='underline')#make john write tiger watch with tigereye
+  john.home()
+  john.right(90)
+  style5 = ('normal', 20, 'bold')
+  style6 = ('normal', 10, 'bold')
+  john.write("My boss asked me why I don't like coding in python", font = style5,align='center')
+  john.forward(100)
+  john.write("I just find it too constricting.", font = style5, align='center')
 
-john.forward(100)
-  john.left(120)
-john.end_fill()
-john.forward(50)
-john.penup()
-john.goto(0, 16)
-john.pencolor('white') #We make the third story, channel 3
-john.write('3', font=style, align='center')#make john write the 3
-undo(8, john)
-john.home()
-john.left(90)
-john.forward(100)
-john.write('Jokes with TigerEye', font=style, 'underline')#make john write tiger watch with tigereye
-john.home()
-john.right(90)
-style5 = ('normal', 20, 'bold')
-style6 = ('normal', 10, 'bold')
-john.write("My boss asked me why I don't like coding in python", font = style5,'center')
-john.write("I said its too constrictoing")
-
-
-
+channel = input("What channel do you want to watch? Please input 1, 2, or 3. If you'd like a full replay, please input anything else")
+if channel==1:
+  channel_one()
+  daily_news()
+elif channel == 2:
+  weather_report()
+elif channel == 3:
+  tiger_jokes()
+else:
+  channel_one()
+  daily_news()
+  weather_report()
+  tiger_jokes()
 
 # Credits
 style=('normal', 20, 'underline')
@@ -211,13 +224,13 @@ john.left(90)
 john.forward(100)
 style7=('normal', 20, 'bold')
 wn.bgcolor('lightgreen')
-john.write("ZANDERMAN NEWS",font = style, align = 'center')
+john.write("ZANDERMAN NEWS",font = style7, align = 'center')
 john.right(180)
 john.forward(150)
-john.write("SparklyFlowers",font = style, align = 'center')#SparklyFlowers
+john.write("SparklyFlowers",font = style7, align = 'center')#SparklyFlowers
 john.forward(50)
-john.write('TigerEye123', font = style, align = 'center')#TigerEye123
+john.write('TigerEye123', font = style7, align = 'center')#TigerEye123
 john.forward(50)
-john.write("Zanderman", font = style, align = 'center')#And Zanderman
+john.write("Zanderman", font = style7, align = 'center')#And Zanderman
 
 wn.mainloop()
