@@ -183,6 +183,7 @@ def weather_report():
 
 def tiger_jokes():
   '''tiger jokes'''
+  style=('normal', 30, 'bold')
   john.penup()
   john.goto(0, 16)
   john.pendown()
@@ -234,3 +235,4 @@ john.forward(50)
 john.write("Zanderman", font = style7, align = 'center')#And Zanderman
 
 wn.mainloop()
+
