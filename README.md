@@ -1,10 +1,10 @@
-# Zanderman_News
 #logo
 import time
 import turtle
 wn = turtle.Screen()
 wn.screensize(1000, 1000)
 john = turtle.Turtle()
+john.penup()
 def undo (times, t):
     for i in range (times):
        t.speed(0)
@@ -58,7 +58,7 @@ for i in range(10):
 
 
   
-undo(42, john)
+undo(60, john)
 
 #drawing triangle
 
@@ -66,6 +66,8 @@ undo(42, john)
 def channel_one():
     john.fillcolor("blue")
     john.begin_fill()
+    john.forward(-50)
+    john.forward(100)
     john.left(120)
     john.forward(100)
     john.left(120)
@@ -74,28 +76,29 @@ def channel_one():
     john.forward(100)
     john.end_fill()
     john.penup()
-#getting to center of triangle (pythagorean theoream)
-    john.goto(0,1/2*((10000-2500)**0.5))
+    #getting to center of triangle (pythagorean theoream)
+    john.goto(0,15)
     john.pendown()
-#writing 1
+    #writing 1
     style=('normal', 20, 'bold')
     john.pencolor('white')
     john.write('1', font=style, align='center')
 
-    john.right(90)
+    john.left(90)
     john.penup()
     john.forward(100)
     john.pencolor('black')
     style=('normal', 30, 'bold')
     john.pendown()
-#top, writing to show channel 1
+    #top, writing to show channel 1
     john.write('Channel', font=style, align='center')
     john.hideturtle()
     wn.bgcolor('lavender')
-#timer (john stalls time)
+    #timer
     time.sleep(3)
-#undo
+    #undo
     undo(42, john)
+    john.speed(0)
 
 
 def daily_news():
@@ -107,7 +110,7 @@ def daily_news():
   undo(3, john)
   john.penup()
   style2=('normal', 20, 'bold')
-  story="Today's story is about SpaklyFlower's Avatar maker."
+  story="Today's story is about SparklyFlower's avatar maker."
   john.left(90)
   john.forward(100)
   john.write(story, font=style2, align='center')
@@ -115,13 +118,14 @@ def daily_news():
   john.hideturtle()
   john.forward(-100)
   style3=('normal', 10, 'bold')
-  report = 'This week SparklyFlowers made history by making a AOPS avatar maker. "\n" Look at post 28 on the messing around with turtles thread to see the program.'
+  report = 'This week SparklyFlowers made history by making a AoPS avatar maker. \n Look at post 28 on the messing around with turtles thread to see the program.'
   john.write(report, font = style3, align = 'center')
   time.sleep(7)
   undo(43, john)
   john.speed(0)
 
 def weather_report():
+  wn.bgcolor('lightblue')
   '''does the weather'''
   style=('normal', 30, 'bold')
   john.fillcolor('navy')
@@ -157,49 +161,226 @@ def weather_report():
   john.color('purple')
   john.write("Weather in \n Canada:", font = style4, align = 'center')
   john.forward(90)
-  john.write("Thunderstorms\n at noon \n till afternoon, \n partly cloudly in\n the evening", font=style4, align = 'center') #We tell the weather
+  john.write("Partly cloudly\n for the day, \n clear at night.\n Perfect temperature\n for going outside!", font=style4, align = 'center') #We tell the weather
   john.forward(-90)
   john.left(90)
   john.forward(200)
   john.right(90)
   john.color('black')
-  john.write("Weather in central US:", font=style4, align='center')
+  john.write("Weather in US:", font=style4, align='center')
   john.forward(70)
-  john.write("Thunderstorms all \nacross the country,\n stay safe.", font=style4, align='center')
+  john.write("Sunny with high temperatures \n at noon,\n partly cloudy in the morning.", font=style4, align='center')
   john.forward(-70)
   john.right(90)
   john.forward(100)
   john.left(90)
   john.forward(200)
-  john.write ("It's 6/23/20 and...", font=style3, align = 'center') #Tell the date
+  john.write ("It's 6/24/20 and...", font=style3, align = 'center') #Tell the date
   john.forward(50)
   john.write("That's it folks!", font=style3, align = 'center')#We end with a that's it folks!
   time.sleep(8)
-  undo(19,john)
+  undo(25,john)
   john.hideturtle()
   john.speed(0)
 
 def tiger_jokes():
+  john.penup()
+  #intro
   '''tiger jokes'''
+  john.hideturtle()
+  wn.bgcolor('lightblue')
+  style=('normal', 30, 'bold')
+  john.fillcolor('navy')
+  john.goto(0,0)
+  john.begin_fill()
+  john.forward(-50)
+  for i in range(3):
+    john.forward(100)
+    john.left(120)
+  john.end_fill()
+  john.forward(50)
   john.penup()
   john.goto(0, 16)
-  john.pendown()
-  john.pencolor('white') #We make the third story, channel 3
-  john.write('3', font=style, align='center')#make john write the 3
-  undo(8, john)
-  john.home()
+  john.pencolor('white') #We make the second story, channel 2
+  john.write('3', font=style, align='center')
+  john.left(90)
+  john.penup()
+  john.forward(100)
+  john.write('Channel', font=style, align='center')
+  john.hideturtle()
+  time.sleep(3)
+  undo(20, john)
+  john.pencolor('black')
+  style=('normal', 20, 'underline')
+  john.penup()
+  john.speed(0)
+  john.hideturtle()
   john.left(90)
   john.forward(100)
-  john.write('Jokes with TigerEye', font=style, align='underline')#make john write tiger watch with tigereye
+  john.write('Jokes with TigerEye', font=style, align='center')#make john write tiger watch with tigereye
   john.home()
+  style=('normal', 30, 'bold')
   john.right(90)
-  style5 = ('normal', 20, 'bold')
-  style6 = ('normal', 10, 'bold')
+  style5 = ('normal', 10, 'bold')
+  style6 = ('normal', 5, 'bold')
   john.write("My boss asked me why I don't like coding in python", font = style5,align='center')
   john.forward(100)
   john.write("I just find it too constricting.", font = style5, align='center')
+  time.sleep(3)
+  undo(20, john)
+  
+def COVID_19():
+  #intro
+   john.hideturtle()
+   wn.bgcolor('lightblue')
+   style=('normal', 30, 'bold')
+   john.fillcolor('navy')
+   john.goto(0,0)
+   john.begin_fill()
+   john.forward(-50)
+   for i in range(3):
+      john.forward(100)
+      john.left(120)
+   john.end_fill()
+   john.forward(50)
+   john.penup()
+   john.goto(0, 16)
+   john.pencolor('white') #We make the second story, channel 2
+   john.write('4', font=style, align='center')
+   john.left(90)
+   john.penup()
+   john.forward(100)
+   john.write('Channel', font=style, align='center')
+   john.hideturtle()
+   time.sleep(3)
+   undo(20, john)
+   john.home()
+   john.penup()
+   john.left(90)
+   john.forward(200)
+   john.write("Cases have been increasing lately in Florida", font = style, align = 'center')
+   john.right(180)
+   john.forward(80)
+   john.write("Total cases: 9.15M", font = style, align = 'center')
+   john.forward(80)
+   john.write("Total recovered: 4.59M", font = style, align = 'center')
+   john.forward(80)
+   john.write("Total deaths: 474K", font = style, align = 'center')
+   time.sleep(3)
+   undo(30, john) 
+   john.left(90)
+   john.penup()
+   john.forward(100)
+   john.write("Total U.S. cases: 2.37M", font = style, align ='center')
+   john.right(180)
+   john.forward(50)
+   john.write("Total U.S. recoveries: 75.35K", font = style, align ='center')
+   john.forward(50)
+   john.write("Total U.S. deaths: 123K", font = style, align ='center')
+   john.forward(50)
+   time.sleep(5)
+   undo(20, john)
+   john.left(90)
+   john.penup()
+   john.forward(100)
+   john.write("Total Canadian cases: 101,637", font=style, align='center')
+   john.right(180)
+   john.forward(50)
+   john.write("Total Canadian recoveries: 64,334", font=style, align='center')
+   john.forward(50)
+   john.write("Total Canadian Deaths: 8,436", font=style, align='center')
+   time.sleep(5)
+   undo(42,john)
+   
+def famous_birthdays():
+  #intro
+  john.hideturtle()
+  wn.bgcolor('lightblue')
+  style=('normal', 30, 'bold')
+  john.fillcolor('navy')
+  john.goto(0,0)
+  john.begin_fill()
+  john.forward(-50)
+  for i in range(3):
+     john.forward(100)
+     john.left(120)
+  john.end_fill()
+  john.forward(50)
+  
+  john.goto(0, 16)
+  john.pencolor('white') #We make the second story, channel 2
+  john.write('5', font=style, align='center')
+  john.left(90)
+  john.penup()
+  john.forward(100)
+  john.write('Channel', font=style, align='center')
+  john.hideturtle()
+  time.sleep(3)
+  undo(20, john)
+  john.home()
+  john.left(90)
+  john.penup()
+  john.forward(100)
+  john.write('Famous Birthdays on June 24', font = style, align = 'center')
+  john.left(180)
+  john.forward(100)
+  
+  style2 = ('normal', 20, 'bold')
+  john.write('Mindy McKnight', font=style, align='center')
+  style3 = ('normal',10, 'normal')
+  john.forward(100)
+  
+  john.write('Mindy McKnight, the YouTuber and founder of CuteGirlsHairstyles.', font=style2, align='center')
+  time.sleep(4)
+  undo(30,john)
 
-channel = input("What channel do you want to watch? Please input 1, 2, or 3. If you'd like a full replay, please input anything else")
+def story():
+  import random
+  style=("normal", 30, 'bold')
+  john.write("Story in the Shell, go and interact!")
+  john.hideturtle()
+  print("You're in the deep blue ocean, sailing with the soft breeze.")
+  print('"Where are we going?", you ask your captain.')
+  print("Your captain, SparklyFlowers, replies with a simple you'll see.")
+  print("Suddenly, there is a loud bang. SparklyFlowers falls down.")
+  print("She swims back up and calls to you - 'jump down here and let's swim to shore!'")
+  n = input("What do you do? Do you listen to her and jump down to the ocean or do you stay on the ship as SparklyFlowers swims away? Input 'listen' or 'stay'")
+  if n == 'stay':
+    print("You chose to stay on the ship. You abandon SparklyFlowers in the water.  Suddenly, your ship sinks really fast.  You and the rest of your crew besides SparklyFlowers fall to the ocean. You'll have to rely on your swimming skills now!")
+    goodOrNot=input("How good are you at swimming? Please input 'good' or 'bad'.")
+    if goodOrNot=='bad':
+      print("Sorry... but you have died.")
+    elif goodOrNot=='good':
+      print("Endurance is important now.")
+      m=random.randint(1, 2)
+      if m==1:
+        print("Congrats, you made it! Give yourself a pat on the back.")
+      elif m==2:
+        print("Sorry... you have died in the battle with endurance.  OOOOOOOF")
+  elif n == 'listen':
+    print("You choose to listen. You jump down to swim with SparklyFlowers. She helps you swim to shore. You then realize that the shore is on an abandoned island.  You will have to survive by yourselves until you can call for help.")
+    print("As soon you reach the island, you take stock of your inventory.  SparklyFlowers has a FirstAid kit and a sword.")
+    print("You also have a sword, and you also have some food and matches.  The matches seem to be drenched and not working, however.")
+    print("You set off for the inside of the island with SparklyFlowers.")
+    print("Suddenly, from your left, a wild boar comes charging.")
+    run = str(input("Do you want to run from the boar, or attack it? Input 'attack' or 'run'."))
+    if run == 'run':
+      print("You run through the jungle, but the boar is too fast and you get sliced to pieces by its tusks.")
+    if run == 'attack':
+      print("You and SparklyFlowers keep the boar away with your swords then slice it to pieces.  Now you have meat to eat later.")
+      print("You have to find some shelter.")
+      shelter = str(input('Where do you go?  To the left side of the island?  Or maybe around to the back of the island, behind the mountain?  Make sure your input is "left" or "back".'))
+      if shelter == 'left':
+        print("You trek through the hot jungle for a few hours with SparklyFlowers, and you finally reach your destination. When you get there, all you see it open beach close to water, and there's not many trees to be seen nearby.  This might not be the best place to set up camp, but it will have to do.") 
+        print("To build a camp, you need trees to set up a building, but there are no trees nearby.  You reach for some driftwood, but then a shark suddenly comes out of the water and bites you hand off.  You scream in pain, and SparklyFlowers use her FirstAid Kit.  It's not enough, and you bleed to death.")
+      if shelter == 'back':
+        print('You trek for 5 hours through the hot jungle to get to the other side of the island.  There you find that the mountain gives you some shade from the bright sun, and there are trees and other plants in abundance, meaning food.')
+        print('You and SparklyFlowers move through the forest, gathering wood and supplies.' + '\n')
+        print('After a few hours, the camp is finished.  There is a fire up and roaring in the middle, and the boar from earlier is being sizzled over it.  You have a small building with four walls, above the ground, that you will sleep in.  There is another building next to it, that is your workplace.  There you will craft tools.')
+        print('The boar looks delicious.  You take it off the fire.  You and SparklyFlowers begin to eat the boar.  It is delicious after a long day of hard work.')
+        print('\n' + 'After telling stories by the fire, it is time to go to bed. It is getting late and you should be sleepy now.  As you drift off into the wonderful dream of escaping this island, you hear a sudden growl.  You disregard it as nothing important, maybe just your stomach growling, but then you realize that your stomach is full and neither you or SparklyFlowers has a reason to growl.  You jump up and hear more growling coming from outside the house.  You wake SparklyFlowers up.  "Hey what\'s going on?" SparklyFlowers asks.  Then she goes pale as she hears the growling.  "Those must be hyenas," she remarks.')
+  
+channel = int(input("What channel do you want to watch? Please input 1, 2, 3, 4, or 5. If you would like to watch all the channels, please input any other integer. "))
 if channel==1:
   channel_one()
   daily_news()
@@ -207,18 +388,31 @@ elif channel == 2:
   weather_report()
 elif channel == 3:
   tiger_jokes()
+elif channel==4:
+  COVID_19()
+elif channel==5:
+  famous_birthdays()
+elif channel==6:
+  story()
+
 else:
   channel_one()
   daily_news()
   weather_report()
-
+  tiger_jokes()
+  COVID_19()
+  famous_birthdays()
+  story()
 
 # Credits
+john.penup()
+john.hideturtle()
 style=('normal', 20, 'underline')
 john.home()
+john.left(90)
+john.forward(50)
 john.color('black')
 john.write("Credits", font = style, align = 'center')#And here are the credits
-john.left(90)
 john.forward(100)
 style7=('normal', 20, 'bold')
 wn.bgcolor('lightgreen')
@@ -230,5 +424,7 @@ john.forward(50)
 john.write('TigerEye123', font = style7, align = 'center')#TigerEye123
 john.forward(50)
 john.write("Zanderman", font = style7, align = 'center')#And Zanderman
+john.forward(50)
+john.write("BlueJay43", font=style7, align='center')
 
 wn.mainloop()
