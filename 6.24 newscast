@@ -337,9 +337,7 @@ def famous_birthdays():
 
 def story():
   import random
-  style=("normal", 30, 'bold')
-  john.write("Story in the Shell, go and interact!", font=style, align='center')
-  john.hideturtle()
+
   print("You're in the deep blue ocean, sailing with the soft breeze.")
   print('"Where are we going?", you ask your captain.')
   print("Your captain, SparklyFlowers, replies with a simple you'll see.")
@@ -367,22 +365,53 @@ def story():
     run = str(input("Do you want to run from the boar, or attack it? Input 'attack' or 'run'."))
     if run == 'run':
       print("You run through the jungle, but the boar is too fast and you get sliced to pieces by its tusks.")
-    if run == 'attack':
+    elif run == 'attack':
       print("You and SparklyFlowers keep the boar away with your swords then slice it to pieces.  Now you have meat to eat later.")
       print("You have to find some shelter.")
       shelter = str(input('Where do you go?  To the left side of the island?  Or maybe around to the back of the island, behind the mountain?  Make sure your input is "left" or "back".'))
       if shelter == 'left':
-        print("You trek through the hot jungle for a few hours with SparklyFlowers, and you finally reach your destination. When you get there, all you see it open beach close to water, and there's not many trees to be seen nearby.  This might not be the best place to set up camp, but it will have to do.") 
-        print("To build a camp, you need trees to set up a building, but there are no trees nearby.  You reach for some driftwood, but then a shark suddenly comes out of the water and bites you hand off.  You scream in pain, and SparklyFlowers use her FirstAid Kit.  It's not enough, and you bleed to death.")
-      if shelter == 'back':
+        print('You trek through the hot jungle for a few hours with SparklyFlowers, and you finally reach your destination. When you get there, all you see it open beach close to water, and there\'s not many trees to be seen nearby.  This might not be the best place to set up camp, but it will have to do.') 
+        print('To build a camp, you need trees to set up a building, but there are no trees nearby.  You reach for some driftwood, but then a shark suddenly comes out of the water and bites you hand off.  You scream in pain, and SparklyFlowers use her FirstAid Kit.  It\'s not enough, and you bleed to death.')
+      elif shelter == 'back':
         print('You trek for 5 hours through the hot jungle to get to the other side of the island.  There you find that the mountain gives you some shade from the bright sun, and there are trees and other plants in abundance, meaning food.')
         print('You and SparklyFlowers move through the forest, gathering wood and supplies.' + '\n')
         print('After a few hours, the camp is finished.  There is a fire up and roaring in the middle, and the boar from earlier is being sizzled over it.  You have a small building with four walls, above the ground, that you will sleep in.  There is another building next to it, that is your workplace.  There you will craft tools.')
         print('The boar looks delicious.  You take it off the fire.  You and SparklyFlowers begin to eat the boar.  It is delicious after a long day of hard work.')
         print('\n' + 'After telling stories by the fire, it is time to go to bed. It is getting late and you should be sleepy now.  As you drift off into the wonderful dream of escaping this island, you hear a sudden growl.  You disregard it as nothing important, maybe just your stomach growling, but then you realize that your stomach is full and neither you or SparklyFlowers has a reason to growl.  You jump up and hear more growling coming from outside the house.  You wake SparklyFlowers up.  "Hey what\'s going on?" SparklyFlowers asks.  Then she goes pale as she hears the growling.  "Those must be hyenas," she remarks.')
+        print('The hyenas are hungry.  They can smell you on the inside.  One breaks through the wood door and come running.  You slash its head off with your sword.')
+        hyena = str(input('Will you fight or flee?  Make sure to input "fight" or "flee"'))
+        if hyena == 'flee':
+          print('You decide to jump out of the building.  You not surprisingly land in a hyena\'s jaws, where it tears you to pieces.  Don\'t think about it too much.')
+        elif hyena == 'fight':
+          print('You decide to fight the hyenas off.  Then you have a great idea. You grab a piece of firewood and you light it up.  SparklyFlowers does the same.  The hyenas see the fire and get scared and run.  You sigh with relief.')
+          print('As you drift back to sleep, you dream of eating hyenas...')
+          print('The next day, when you wake up, the sun is burning hot, but since you chose to camp behind the mountain, it doesn\'t scorch you.  You walk outside, and find SparklyFlowers preparing some fruit from the forest to eat.  SparklyFlowers gives you the bigger half of the fruit.  You are glad that you have such a generous captain.')
+          print('You need to find another food source other than just fruits.  You try fishing.')
+          print('At first, you try just grabbing the fish with your hands.  Obviously, it doesn\'t work as the fish are too fast.  Then, you try using a sharp stick.')
+          print('You will need to go underwater, because the water seems to bend the light.')
+          print('At last, you catch your first fish.  You take it back to your camp.  SparklyFlowers gets a fire going, and you grill the fish and eat it for lunch.')
+          print('It is delicious.')
+          print('You then explore the island and find some meat for dinner.')
+          print('Three decades pass by like this, with no one coming by to help you and SparklyFlowers.')
+          print(':(')
+          print('At last, you see a ship come by.  You wave and it comes over.  The captain of the ship says, "Hey, aren\'t you the people that went missing for a few decades?"')
+          print('You and SparklyFlowers are gladly rescued and given a welcome parade when you arrive back on the mainland.')
+          print('But, one night, as you are sleeping in your bed, you have a dream.  You are back on the island with SparklyFlowers, and the mountain that you lodged behind starts erupting.')
+          print('You wake up and scream, only to find that you are still on the island, and it was all a dream.')
+          print('Then, just like in your dream, the earth starts shaking and hot lava starts spewing out of the top.')
+          volcano = input('Do you run to the sea, or do you run towards the other side of the island, or do you run up the volcano?  Make sure that your answer is "sea", "other side", or "volcano".')
+          if volcano == 'volcano':
+            print('What are you trying to do die and get scalded')
+          elif volcano == 'other side':
+            print('You run to the other side, only to find that it is also covered in lava.')
+            print('ded')
+          elif volcano == 'sea':
+            print('You run into the sea and as the lava comes rushing towards you, it slowly hardens.  It destroys your camp, but all that really matters is that you are still alive.')
+            print('In a few days, scientists come and rescue you.  They felt the rumbling of the volcano from so far away.  They picked up seismic waves and detected that it came from your island.  They find you, and this time you are actually saved.')
+            print('Congratulations, you have beat the game!')
   undo(5, john)
   
-channel = input("What channel do you want to watch? Please input 1, 2, 3, 4, or 5. If you would like to watch all the channels, please input anything else. ")
+channel = input("What channel do you want to watch? Please input 1, 2, 3, 4, 5, or 6. If you would like to watch all the channels, please input anything else. ")
 if channel=='1':
   channel_one()
   daily_news()
