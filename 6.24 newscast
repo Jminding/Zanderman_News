@@ -4,6 +4,7 @@ import turtle
 wn = turtle.Screen()
 wn.screensize(1000, 1000)
 john = turtle.Turtle()
+john.hideturtle()
 john.penup()
 def undo (times, t):
     for i in range (times):
@@ -91,7 +92,7 @@ def channel_one():
     style=('normal', 30, 'bold')
     john.pendown()
     #top, writing to show channel 1
-    john.write('Channel', font=style, align='center')
+    john.write('Channel', font = style, align ='center')
     john.hideturtle()
     wn.bgcolor('lavender')
     #timer
@@ -110,15 +111,15 @@ def daily_news():
   undo(3, john)
   john.penup()
   style2=('normal', 20, 'bold')
-  story="Today's story is about SparklyFlower's avatar maker."
-  john.left(90)
-  john.forward(100)
+  john.home()
+  john.right(90)
+  story = "Today's story is about the Zanderman News Poll."
   john.write(story, font=style2, align='center')
   wn.bgcolor('lightblue')
   john.hideturtle()
-  john.forward(-100)
+  john.forward(50)
   style3=('normal', 10, 'bold')
-  report = 'This week SparklyFlowers made history by making a AoPS avatar maker. \n Look at post 28 on the messing around with turtles thread to see the program.'
+  report = "The official results from the first Zanderman News Poll Came out today. It seems most people like to name their turtles randomly. Many people name their turtles the first thing that comes to mind. '\n' If you would like a randomly generated turtle name, go to post number 8 on the Zanderman News Interview with the Public thread."
   john.write(report, font = style3, align = 'center')
   time.sleep(7)
   undo(43, john)
@@ -223,10 +224,10 @@ def tiger_jokes():
   john.right(90)
   style5 = ('normal', 10, 'bold')
   style6 = ('normal', 5, 'bold')
-  john.write("My boss asked me why I don't like coding in python", font = style5,align='center')
+  john.write("Why does Python live on land?", font = style5,align='center')
   john.forward(100)
-  john.write("I just find it too constricting.", font = style5, align='center')
-  time.sleep(3)
+  john.write("Because it's above C-level.", font = style5, align='center')
+  time.sleep(5)
   undo(20, john)
   
 def COVID_19():
@@ -261,20 +262,20 @@ def COVID_19():
    john.write("Cases have been increasing lately in Florida", font = style, align = 'center')
    john.right(180)
    john.forward(80)
-   john.write("Total cases: 9.15M", font = style, align = 'center')
+   john.write("Total cases: 9.24M", font = style, align = 'center')
    john.forward(80)
-   john.write("Total recovered: 4.59M", font = style, align = 'center')
+   john.write("Total recovered: 4.61M", font = style, align = 'center')
    john.forward(80)
-   john.write("Total deaths: 474K", font = style, align = 'center')
-   time.sleep(3)
+   john.write("Total deaths: 477K", font = style, align = 'center')
+   time.sleep(5)
    undo(30, john) 
    john.left(90)
    john.penup()
    john.forward(100)
-   john.write("Total U.S. cases: 2.37M", font = style, align ='center')
+   john.write("Total U.S. cases: 2.39M", font = style, align ='center')
    john.right(180)
    john.forward(50)
-   john.write("Total U.S. recoveries: 75.35K", font = style, align ='center')
+   john.write("Total U.S. recoveries: 740K", font = style, align ='center')
    john.forward(50)
    john.write("Total U.S. deaths: 123K", font = style, align ='center')
    john.forward(50)
@@ -283,12 +284,12 @@ def COVID_19():
    john.left(90)
    john.penup()
    john.forward(100)
-   john.write("Total Canadian cases: 101,637", font=style, align='center')
+   john.write("Total Canadian cases: 101,963", font=style, align='center')
    john.right(180)
    john.forward(50)
-   john.write("Total Canadian recoveries: 64,334", font=style, align='center')
+   john.write("Total Canadian recoveries: 64,704", font=style, align='center')
    john.forward(50)
-   john.write("Total Canadian Deaths: 8,436", font=style, align='center')
+   john.write("Total Canadian Deaths: 8,454", font=style, align='center')
    time.sleep(5)
    undo(42,john)
    
@@ -337,7 +338,7 @@ def famous_birthdays():
 def story():
   import random
   style=("normal", 30, 'bold')
-  john.write("Story in the Shell, go and interact!")
+  john.write("Story in the Shell, go and interact!", font=style, align='center')
   john.hideturtle()
   print("You're in the deep blue ocean, sailing with the soft breeze.")
   print('"Where are we going?", you ask your captain.')
@@ -379,20 +380,21 @@ def story():
         print('After a few hours, the camp is finished.  There is a fire up and roaring in the middle, and the boar from earlier is being sizzled over it.  You have a small building with four walls, above the ground, that you will sleep in.  There is another building next to it, that is your workplace.  There you will craft tools.')
         print('The boar looks delicious.  You take it off the fire.  You and SparklyFlowers begin to eat the boar.  It is delicious after a long day of hard work.')
         print('\n' + 'After telling stories by the fire, it is time to go to bed. It is getting late and you should be sleepy now.  As you drift off into the wonderful dream of escaping this island, you hear a sudden growl.  You disregard it as nothing important, maybe just your stomach growling, but then you realize that your stomach is full and neither you or SparklyFlowers has a reason to growl.  You jump up and hear more growling coming from outside the house.  You wake SparklyFlowers up.  "Hey what\'s going on?" SparklyFlowers asks.  Then she goes pale as she hears the growling.  "Those must be hyenas," she remarks.')
+  undo(5, john)
   
-channel = int(input("What channel do you want to watch? Please input 1, 2, 3, 4, or 5. If you would like to watch all the channels, please input any other integer. "))
-if channel==1:
+channel = input("What channel do you want to watch? Please input 1, 2, 3, 4, or 5. If you would like to watch all the channels, please input anything else. ")
+if channel=='1':
   channel_one()
   daily_news()
-elif channel == 2:
+elif channel == '2':
   weather_report()
-elif channel == 3:
+elif channel == '3':
   tiger_jokes()
-elif channel==4:
+elif channel=='4':
   COVID_19()
-elif channel==5:
+elif channel=='5':
   famous_birthdays()
-elif channel==6:
+elif channel=='6':
   story()
 
 else:
@@ -426,5 +428,12 @@ john.forward(50)
 john.write("Zanderman", font = style7, align = 'center')#And Zanderman
 john.forward(50)
 john.write("BlueJay43", font=style7, align='center')
+time.sleep(3)
+undo(13,john)
+john.speed(0)
+john.home()
+john.right(90)
+style=('normal', 20, 'bold')
+john.write("Thanks For Watching!", font = style, align = 'center')
 
 wn.mainloop()
