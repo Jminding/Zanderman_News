@@ -45,11 +45,11 @@ john.end_fill()
 # Making the circle
  
 def draw_square(some_turtle):
- 
+
     for i in range (1,5):
         some_turtle.forward(200)
         some_turtle.right(90)
- 
+
 def draw_art():
     window = turtle.Screen()
     window.bgcolor("black")
@@ -64,14 +64,14 @@ def draw_art():
         brad.right(10)
     undo(400, brad)
     brad.hideturtle()
- 
- 
- 
+
+    
+
 draw_art()
- 
- 
+  
+
 undo(36, john)
- 
+
 def channel_one():
     john.fillcolor("blue")
     john.begin_fill()
@@ -92,7 +92,7 @@ def channel_one():
     style=('normal', 20, 'bold')
     john.pencolor('white')
     john.write('1', font=style, align='center')
- 
+
     john.left(90)
     john.penup()
     john.forward(100)
@@ -108,8 +108,8 @@ def channel_one():
     #undo
     undo(42, john)
     john.speed(0)
- 
- 
+
+
 def daily_news():
   '''shows the daily news'''
   style=('normal', 20, 'bold')
@@ -133,7 +133,7 @@ def daily_news():
   time.sleep(10)
   undo(43, john)
   john.speed(0)
- 
+
 def weather_report():
   wn.bgcolor('lightblue')
   '''does the weather'''
@@ -171,7 +171,7 @@ def weather_report():
   john.color('purple')
   john.write("Weather in Toronto", font = style4, align = 'center')
   john.forward(125)
-  john.write("\n\nMostly partly cloudy/sunny\n and around 27 C (80.6 F)\n for the day, \nclear at night.\n Perfect temperature\n for going outside!", font=style4, align = 'center') #We tell the weather
+  john.write("\n\nMostly sunny\n and around 28 ˚C (82 ˚F)\n for the day,\n perfect temperature\n for going outside!", font=style4, align = 'center') #We tell the weather
   john.forward(-125)
   john.left(90)
   john.forward(215)
@@ -179,20 +179,20 @@ def weather_report():
   john.color('black')
   john.write("Weather in Washington, DC, USA:", font=style4, align='center')
   john.forward(125)
-  john.write("Partly cloudy \n for most of the day,\n temperatures around 30 C (86 F).", font=style4, align='center')
+  john.write("Sunny \n for most of the day,\n temperatures around 33 ˚C (91 ˚F).", font=style4, align='center')
   john.forward(-70)
   john.right(90)
   john.forward(100)
   john.left(90)
   john.forward(200)
-  john.write ("It's 6/26/20 and...", font=style3, align = 'center') #Tell the date
+  john.write ("It's 6/28/20 and...", font=style3, align = 'center') #Tell the date
   john.forward(50)
   john.write("That's it folks!", font=style3, align = 'center')#We end with a that's it folks!
   time.sleep(8)
   undo(25,john)
   john.hideturtle()
   john.speed(0)
- 
+
 def tiger_jokes():
   john.penup()
   #intro
@@ -233,15 +233,15 @@ def tiger_jokes():
   john.right(90)
   style5 = ('normal', 10, 'bold')
   style6 = ('normal', 5, 'bold')
-  john.write("Today we have another joke is built into python itself.", font = style5,align='center')
+  john.write("A girl walks into a store and asks for a rabbit.", font = style5,align='center')
   john.forward(100)
-  john.write("Go to python, open a new module, and write import antigravity.", font = style5, align='center')
+  john.write("The pet store owner asks her if she wants a cute one or a chubby one.", font = style5, align='center')
   john.forward(100)
-  john.write("Run the program and check out that comic. ",font = style5, align='center')
- 
+  john.write("The girl says her python wouldn't care.",font = style5, align='center')
+
   time.sleep(5)
   undo(20, john)
- 
+  
 def COVID_19():
   #intro
    john.hideturtle()
@@ -274,22 +274,22 @@ def COVID_19():
    john.write("Covid-19 Stats", font = style, align = 'center')
    john.right(180)
    john.forward(80)
-   john.write("Total cases: 9.63M", font = style, align = 'center')
+   john.write("Total cases: 10.1M", font = style, align = 'center')
    john.forward(80)
-   john.write("Total recovered: 4.86M", font = style, align = 'center')
+   john.write("Total recovered: 5.1M", font = style, align = 'center')
    john.forward(80)
-   john.write("Total deaths: 490K", font = style, align = 'center')
+   john.write("Total deaths: 501K", font = style, align = 'center')
    time.sleep(5)
    undo(30, john) 
    john.left(90)
    john.penup()
    john.forward(100)
-   john.write("Total U.S. cases: 2.47M", font = style, align ='center')
+   john.write("Total U.S. cases: 2.59M", font = style, align ='center')
    john.right(180)
    john.forward(50)
-   john.write("Total U.S. recoveries: 765K", font = style, align ='center')
+   john.write("Total U.S. recoveries: 789K", font = style, align ='center')
    john.forward(50)
-   john.write("Total U.S. deaths: 126K", font = style, align ='center')
+   john.write("Total U.S. deaths: 128K", font = style, align ='center')
    john.forward(50)
    time.sleep(5)
    undo(20, john)
@@ -299,12 +299,16 @@ def COVID_19():
    john.write("Total Canadian cases: 103K", font=style, align='center')
    john.right(180)
    john.forward(50)
-   john.write("Totals Canadian recoveries: 65,425", font=style, align='center')
+   john.write("Totals Canadian recoveries: 66,191", font=style, align='center')
    john.forward(50)
-   john.write("Total Canadian Deaths: 8,504", font=style, align='center')
+   john.write("Total Canadian Deaths: 8,522", font=style, align='center')
    time.sleep(5)
    undo(42,john)
- 
+   john.home()
+   john.write("             Stay safe and healthy, \nand don't forget to wash your hands!", font=style, align='center')
+   time.sleep(5)
+   john.undo()
+   
 def famous_birthdays():
   #intro
   john.hideturtle()
@@ -319,7 +323,7 @@ def famous_birthdays():
      john.left(120)
   john.end_fill()
   john.forward(50)
- 
+  
   john.goto(0, 16)
   john.pencolor('white') 
   john.write('5', font=style, align='center')
@@ -334,22 +338,22 @@ def famous_birthdays():
   john.left(90)
   john.penup()
   john.forward(100)
-  john.write('Famous Birthday on June 26:', font = style, align = 'center')
+  john.write('Famous Birthday on June 28th:', font = style, align = 'center')
   john.left(180)
   john.forward(100)
- 
+  
   style2 = ('normal', 20, 'bold')
-  john.write('Ariana Grande', font=style, align='center')
+  john.write('Elon Musk', font=style, align='center')
   style3 = ('normal', 10 , 'bold')
   john.forward(100)
- 
-  john.write('Ariana Grande, a pop star, and a famous singer.', font=style2, align='center')
+  
+  john.write('Elon Musk, entreprenuer and businessman.  Owner of Tesla and SpaceX.', font=style2, align='center')
   time.sleep(4)
   undo(30,john)
- 
+
 def story():
   import random
- 
+
   print("You're in the deep blue ocean, sailing with the soft breeze.")
   print('"Where are we going?", you ask your captain.')
   print("Your captain, SparklyFlowers, replies with a simple you'll see.")
@@ -437,7 +441,7 @@ def advertisement():
   john.forward(50)
   john.goto(0, 16)
   john.pencolor('white')
-  john.write('7', font=style, align='center')
+  john.write('6', font=style, align='center')
   john.left(90)
   john.penup()
   john.forward(100)
@@ -450,12 +454,12 @@ def advertisement():
   john.left(90)
   john.penup()
   john.forward(100)
-  john.write("Old Johnny was having back pains, and couldn't enjoy himself", font = style, align = 'center')
+  john.write("Little Jim felt like he was missing something in his life.", font = style, align = 'center')
   john.forward(-50)
-  john.write("Then Old Johnny took a Back Pain Relief, back pain relif pill, and was so happy.", font=style, align='center')
+  john.write("Then he bought the phonoscope; attach it to your phone, and see the stars!.", font=style, align='center')
   john.forward(-50)
   style2 = ('normal', 10, 'italic')
-  john.write("Side effects may include back pain, death, death, and death", font = style2, align = 'center')
+  john.write("Side effects may include blindness, fun, and fun.", font = style2, align = 'center')
   time.sleep(5)
   undo(10, john)
   john.penup()
@@ -464,11 +468,11 @@ def advertisement():
   style = ('normal', 30, 'bold')
   john.write("BUY", font = style, align = 'center')
   john.forward(50)
-  john.write("a back pain relif pill made by Back Pain Relif Pill incorporated", font = style, align = 'center')
+  john.write("a phonoscope from M19 productions company.", font = style, align = 'center')
   time.sleep(4)
   undo(35,john)
- 
-channel = input("What channel do you want to watch? Please input 1, 2, 3, 4, 5, 6, or 7. If you would like to watch all the channels, please input anything else. ")
+  
+channel = input("What channel do you want to watch? Please input 1, 2, 3, 4, 5, or 6. If you would like to watch all the channels, please input anything else. ")
 if channel=='1':
   channel_one()
   daily_news()
@@ -480,11 +484,9 @@ elif channel=='4':
   COVID_19()
 elif channel=='5':
   famous_birthdays()
-elif channel=='6':
-  story()
-elif channel == '7':
+elif channel == '6':
   advertisement()
- 
+
 else:
   channel_one()
   daily_news()
@@ -492,9 +494,8 @@ else:
   tiger_jokes()
   COVID_19()
   famous_birthdays()
-  story()
   advertisement()
- 
+
 # Credits
 john.penup()
 john.hideturtle()
@@ -524,5 +525,7 @@ john.home()
 john.right(90)
 style=('normal', 20, 'bold')
 john.write("Thanks For Watching!", font = style, align = 'center')
- 
+
+
+
 wn.mainloop()
