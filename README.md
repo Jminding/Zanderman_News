@@ -1,3 +1,6 @@
+# Maybe I'm thinking of eventually reviving this?  Looks interesting
+## This was a collab between me and some other AoPS users :)
+
 [![Run on Repl.it](https://repl.it/badge/github/SparklyFlowers/Zanderman_News)](https://repl.it/github/SparklyFlowers/Zanderman_News)
 #logo
 import time
